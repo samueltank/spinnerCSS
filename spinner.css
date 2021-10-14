@@ -1,0 +1,115 @@
+@keyframes spin 
+{
+   100%
+   {
+      transform: rotate(360deg);
+   }
+}
+
+.spinner
+{
+   width: 80px;
+   height: 80px;
+   background-color: blueviolet;
+   border: 5px solid white;
+   border-top-color: blue;
+   animation: spin 2s linear infinite;
+   border-radius: 50%;
+}
+
+.spinner>div
+{
+   box-sizing: inherit;
+   width: 100%;
+   height: 100%;
+   flex-grow: 1;
+   animation: spin 1s reverse linear infinite;
+}
+
+.spinner-dual
+{
+   width: 80px;
+   height: 80px;
+   background-color: blueviolet;
+   border: 5px solid transparent;
+   border-top-color: blue;
+   border-bottom-color: blue;
+   animation: spin 2s linear infinite;
+   border-radius: 50%;
+}
+
+.spinner-dual>div
+{
+   box-sizing: inherit;
+   width: 100%;
+   height: 100%;
+   flex-grow: 1;
+   animation: spin 1.2s reverse linear infinite;
+}
+
+.spinner-fast
+{
+   width: 80px;
+   height: 80px;
+   background-color: blueviolet;
+   border-top: 4px solid blue;
+   border-right: 4px solid transparent;
+   animation: spin 0.7s linear infinite;
+   border-radius: 50%;
+}
+
+.spinner-fast>div
+{
+   box-sizing: inherit;
+   width: 100%;
+   height: 100%;
+   flex-grow: 1;
+   animation: spin 2s linear infinite;
+}
+
+.spinner-triple
+{
+   width: 80px;
+   height: 80px;
+   background-color: blueviolet;
+   border: 5px solid transparent;
+   border-top-color: lightsteelblue;
+   animation: spin 1.5s linear infinite;
+   border-radius: 50%;
+}
+
+.spinner-triple>div
+{
+   box-sizing: inherit;
+   height: 100%;
+   width: 100%;
+   flex-grow: 1;
+}
+
+.spinner-triple::before
+{
+   content: "";
+   border: 5px solid transparent;
+   border-top-color: lightblue;
+   position: absolute;
+   border-radius: 50%;
+   top: 3px;
+   left: 3px;
+   right: 3px;
+   bottom: 3px;
+   animation: spin 1.3s linear infinite;
+}
+
+.spinner-triple::after
+{
+   content: "";
+   border: 5px solid transparent;
+   border-top-color: lightskyblue;
+   position: absolute;
+   border-radius: 50%;
+   top: 12px;
+   left: 12px;
+   right: 12px;
+   bottom: 12px;
+   animation: spin 1s linear infinite;
+}
